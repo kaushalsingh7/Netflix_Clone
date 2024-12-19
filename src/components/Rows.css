@@ -1,0 +1,54 @@
+.row {
+    margin-left: 10px;
+    color: white;
+  }
+  .row_title{
+    
+        top: 20%;
+        left: 10px; /* Maintain left alignment */
+        text-align: left; /* Ensure text is left-aligned */
+      }
+  
+  
+  .row_posters {
+    display: flex; /* Ensures images are in a single row */
+    flex-wrap: nowrap; /* Prevents wrapping of images */
+    overflow-x: auto; /* Allows horizontal scrolling */
+    overflow-y: hidden; 
+    padding: 10px 0; /* Adds some padding around the row */
+    width: 100%; /* Ensures the row takes the full width of the container */
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+  }
+  
+  .row_posters::-webkit-scrollbar {
+    display: none; /* Hides scrollbar for WebKit browsers */
+  }
+  
+  .row_posters img {
+    object-fit: cover; /* Maintains aspect ratio and fills container */
+    flex-shrink: 0; /* Prevents images from shrinking */
+    width: 80%; /* Adjusted for responsive width */
+    max-width: 100px; /* Sets a maximum width */
+    height: auto; /* Keeps height proportional to width */
+    margin-right: 15px; /* Spacing between images */
+    border-radius: 10px; /* Optional: Adds rounded corners to images */
+    transition: transform 0.3s; /* Smooth hover effect */
+  }
+  
+  .row_posters img:hover {
+    transform: scale(1.1); /* Enlarges image on hover */
+    cursor: pointer; /* Changes cursor to pointer */
+  }
+  
+  @media (max-width: 768px) {
+    .row_posters img {
+      width: 90%; /* Increases image width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .row_posters img {
+      width: 100%; /* Full width for very small screens */
+    }
+  }
+  

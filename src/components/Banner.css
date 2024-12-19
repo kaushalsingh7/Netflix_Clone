@@ -1,0 +1,118 @@
+.banner {
+  position: relative;
+  color: white;
+  object-fit: contain;
+  height: 500px; /* Adjust the height as needed */
+}
+
+.banner_contents {
+  position: absolute;
+  top: 30%;
+  left: 10px; /* Align to the left */
+  text-align: left; /* Ensure text alignment is to the left */
+}
+
+.banner_title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.banner_description {
+  width: 50%; /* Adjust to fit the layout */
+  line-height: 1.3;
+  padding-top: 10px;
+  font-size: 1.2rem;
+  max-width: 500px;
+  height: 80px; /* Truncate longer descriptions */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.banner_buttons {
+  margin-top: 20px;
+}
+
+.banner_button {
+  cursor: pointer;
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin-right: 10px;
+  background-color: rgba(51, 51, 51, 0.5);
+  transition: all 0.3s ease;
+}
+
+.banner_button:hover {
+  background-color: white;
+  color: black;
+}
+
+.banner--fadeBottom {
+  height: 100px;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .banner {
+    height: 400px;
+  }
+
+  .banner_contents {
+    top: 20%;
+    left: 10px; /* Maintain left alignment */
+    text-align: left; /* Ensure text is left-aligned */
+  }
+
+  .banner_title {
+    font-size: 2rem;
+  }
+
+  .banner_description {
+    width: 90%; /* Full width for better readability */
+    font-size: 0.9rem;
+    height: auto; /* Allow full content to display */
+  }
+
+  .banner_button {
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 350px;
+  }
+
+  .banner_contents {
+    top: 15%;
+    left: 10px;
+    text-align: left; /* Maintain left alignment */
+  }
+
+  .banner_title {
+    font-size: 1.5rem;
+  }
+
+  .banner_description {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .banner_button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}
